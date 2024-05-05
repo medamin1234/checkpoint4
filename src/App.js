@@ -1,7 +1,7 @@
-import playerList from "./playersList";
+import PlayerList from "./playersList";
 
 const App = () => {
-  return <playerList />;
+  return <PlayerList />;
 };
 
 export default App;

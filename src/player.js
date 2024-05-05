@@ -1,15 +1,28 @@
 import Card from "react-bootstrap/Card";
 
-const playerCard = ({ playerList }) => {
+const PlayerCard = ({
+  name = "UNKNOWN",
+  age = "UNKNOWN",
+  nationnality = "UNKNOWN",
+  jerseyNumber = "UNKNOWN",
+  image,
+}) => {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={playerList.image} />
+      <div>
+        <Card.Img
+          variant="top"
+          src={image}
+          style={{ height: "80", width: "100" }}
+        />
+      </div>
       <Card.Body>
-        <Card.Title>{playerList.name}</Card.Title>
-        <Card.Text>{playerList.age}</Card.Text>
-        <Card.Text>{playerList.nationnality}</Card.Text>
-        <Card.Text>{playerList.jerseyNumber}</Card.Text>
+        <Card.Title>{name}</Card.Title>
+        <Card.Text>{age}</Card.Text>
+        <Card.Text>{nationnality}</Card.Text>
+        <Card.Text>{jerseyNumber}</Card.Text>
       </Card.Body>
     </Card>
   );
 };
+export default PlayerCard;

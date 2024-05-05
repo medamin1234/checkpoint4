@@ -1,12 +1,13 @@
 import players from "./player.json";
-import playerCard from "./player";
+import PlayerCard from "./player";
 
-const playerList = () => {
+const PlayerList = () => {
   return (
     <div style={{ display: "flex" }}>
       {players.map((v, i) => (
-        <playerCard items={v} key={i} />
+        <PlayerCard {...v} key={i} />
       ))}
     </div>
   );
 };
+export default PlayerList;
